@@ -1,6 +1,6 @@
 // 맨 위 — 스터디 이름과 한 줄 소개
 function Header() {
-  const siteName = "오즈 스터디";
+  const siteName = "오즈 스터디 백종현";
 
   return (
     <header className="site-header">

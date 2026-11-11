@@ -10,6 +10,7 @@ function Main() {
       <p>우리 스터디는 {members}명입니다. 기획 · 디자인 · 개발을 공부합니다.</p>
 
       <div className="card-list">
+        <ProfileCard name="백종현" role="사람" intro="사람입니다." age={30} />
         <ProfileCard name="김하늘" role="기획" intro="사용자가 처음 보는 화면부터 정합니다." projects={3} />
         <ProfileCard name="이바다" role="디자인" intro="색과 글꼴로 첫인상을 만듭니다." projects={2} />
         <ProfileCard name="박나무" role="개발" intro="버튼이 눌리는 순간을 코드로 만듭니다." projects={4} />

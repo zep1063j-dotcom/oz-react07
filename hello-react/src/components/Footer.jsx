@@ -1,6 +1,6 @@
 // 맨 아래 — 저작권 한 줄
 function Footer() {
-  const year = 2026;
+  const year = 2027;
 
   return (
     <footer className="site-footer">

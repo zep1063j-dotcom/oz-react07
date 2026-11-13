@@ -7,8 +7,9 @@ const members = [
   { id: 2, name: "이바다", role: "디자인", intro: "색과 글꼴로 첫인상을 만듭니다.", projects: 2 },
   { id: 3, name: "박나무", role: "개발", intro: "버튼이 눌리는 순간을 코드로 만듭니다.", projects: 4 },
   { id: 4, name: "최새봄", intro: "이번 주에 스터디에 들어왔습니다." },
+  { id: 5, name: "백종현", role: "마케팅" ,intro: "이번 주에 스터디에 들어왔습니다." },
 ];
-const roles = ["전체", "기획", "디자인", "개발"];
+const roles = ["전체", "기획", "디자인", "개발", "마케팅", "놀기"];
 
 // 가운데 — 멤버 소개 글과 멤버 카드. 고른 역할의 카드만 그립니다
 function Main({ presenter, onSelect }) {
@@ -20,7 +21,7 @@ function Main({ presenter, onSelect }) {
   return (
     <main className="site-main">
       <h2>멤버 소개</h2>
-      <p>우리 스터디는 {members.length}명입니다. 기획 · 디자인 · 개발을 공부합니다.</p>
+      <p>우리 스터디는 {visibleMembers.length}명입니다. 기획 · 디자인 · 개발을 공부합니다.</p>
 
       <div className="role-buttons">
         {roles.map((item) => (
@@ -46,6 +47,11 @@ function Main({ presenter, onSelect }) {
             onSelect={onSelect}
           />
         ))}
+        {
+          visibleMembers.length === 0 && (
+            <p className="no-member">선택한 역할의 멤버가 없습니다.</p>
+          )
+        }
       </div>
     </main>
   );

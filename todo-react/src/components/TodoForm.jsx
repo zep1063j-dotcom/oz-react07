@@ -27,6 +27,7 @@ function TodoForm({ onAdd }) {
           maxLength={20}
           placeholder="할 일을 입력하고 Enter"
         />
+        <p>지금 입력한 값 : {text.length}</p>
         <button type="submit">추가</button>
       </form>
       {message && <p className="msg">{message}</p>}
